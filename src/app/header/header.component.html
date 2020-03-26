@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <div class="logo">
+        <a routerLink="/">My App</a>
+    </div>
+    <div class="spacer"></div>
+    <div class="add">
+       <a routerLink="/addpost" *ngIf="userislogin">New Post</a>
+        <a routerLink="/signup" *ngIf="!userislogin">Signup</a>
+        <a routerLink="/login" *ngIf="!userislogin">Login</a>
+        <button mat-button *ngIf="userislogin" (click)="OnLogout()">Logout</button>
+    </div>
+</mat-toolbar>

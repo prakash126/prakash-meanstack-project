@@ -1,0 +1,13 @@
+<mat-card>
+    <form #loginform="ngForm" (ngSubmit)="login(loginform)">
+        <mat-form-field>
+            <input type="text" matInput name="useremail" ngModel #useremail="ngModel" placeholder="Username..." required email>
+            <mat-error *ngIf="useremail.invalid">Please Enter Username</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password" matInput name="userpwd" ngModel #userpwd="ngModel" placeholder="password..." required>
+            <mat-error *ngIf="userpwd.invalid">Please Enter Password</mat-error>
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+    </form>
+</mat-card>
